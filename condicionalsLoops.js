@@ -31,7 +31,7 @@ const pet = "perro";
 //Escribe tu código aquí
 
 
-//Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante day e imprima en consola si es soleado "Me vestiré con un vestido" y si no es así que imprima "Me vestiré con pantalón"
+//Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante weather e imprima en consola si es soleado "Me vestiré con un vestido" y si no es así que imprima "Me vestiré con pantalón"
 
 const weather = "soleado"
 
@@ -55,7 +55,7 @@ const value = '1'
 //Escribe tu código aquí
 
 
-//Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia constenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: 0: Ada Lovelace, su aporte fue la máquina analítica. 
+//Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia contenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: '0: Ada Lovelace, su aporte fue la máquina analítica'. 
 
 const programmers = [
     {
