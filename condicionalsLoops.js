@@ -31,7 +31,7 @@ const pet = "perro";
 //Escribe tu código aquí
 
 
-//Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante day e imprima en consola si es soleado "Me vestiré con un vestido" y si no es así que imprima "Me vestiré con pantalón"
+//Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante weather e imprima en consola si es soleado "Llevaré gafas de sol" y si no es así que imprima "Llevaré chaqueta"
 
 const weather = "soleado"
 
@@ -50,12 +50,12 @@ const value = '1'
 
 //BUCLES
 
-//Ejercicio 9: Imprime en consola una lista del 0 al 10 con el bucle for
+//Ejercicio 9: Imprime en consola una lista del 0 al 10 con el bucle 'for'
 
 //Escribe tu código aquí
 
 
-//Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia constenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: 0: Ada Lovelace, su aporte fue la máquina analítica. 
+//Ejercicio 10: Con un bucle 'for in' imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia constenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: "0: Ada Lovelace, su aporte fue la máquina analítica." 
 
 const programmers = [
     {
@@ -83,7 +83,7 @@ const programmers = [
 //Escribe tu código aquí
 
 
-//Ejercicio 11: Con un bucle for of imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
+//Ejercicio 11: Con un bucle 'for of' imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
 
 const names = ['Rocío', 'Lola', 'Antía', 'Laura', 'Noelia']
 
