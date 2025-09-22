@@ -1,35 +1,35 @@
-# 🎠 Ejercicio 2 — Invertir una cadena
+# 📝 Ejercicio 2 — Contador de Palabras
 
-## ¿Qué tienes que hacer?
+## ¿Qué tienes que hacer
 
-Vas a escribir un programa que tome una palabra o frase y devuelva esa cadena escrita al revés.
+Vas a escribir un programa que reciba un texto y cuente cuántas veces aparece cada palabra, el programa debe mostrar cada palabra junto con la cantidad de veces que aparece.
 
-### Ejemplo:
+Por ejemplo, si el texto es:
 
-- Entrada: `"Hola mundo"`  
-- Salida: `"odnum aloH"`
+> **`"Hola, hola mundo! Mundo mundo"`**
+
+El resultado debería ser algo así:
+> **hola: 2<br>**
+> **mundo: 3**
 
 ---
 
 ## 🎯 Objetivo del ejercicio
 
-Practicar el uso de:
+Aprender a:
 
-- Bucles
-- Manipulación de strings
-- Control de índices
-- Construcción de una nueva cadena paso a paso
+- Manipulación de strings en JavaScript (minúsculas, limpieza de texto, división por palabras).
+- Uso de objetos o mapas para contar cosas.
+- Pensar en algoritmos paso a paso: normalizar, separar, contar y mostrar
+- Recorrer datos con bucles **`(for, for...of)`**
 
 ---
 
 ### ✅ Criterios de evaluación
 
-- Toma una cadena y devuelve correctamente el texto invertido.
-- No utilices funciones automáticas de inversión como `.reverse()`.  
-  > El objetivo del reto es aprender a usar bucles, índices y lógica manual, no depender de funciones que lo hagan por ti.  
-  > Es como aprender a sumar sin usar una calculadora, te ayuda a entender cómo funciona la lógica por dentro.
-- Código limpio y comentado.
-- Funciona para cualquier texto (frases cortas, números, incluso cadenas vacías).
+- El programa debe ignorar signos de puntuación **(.,!?)**
+- Las mayúsculas y minúsculas cuentan como la misma palabra
+- No puedes usar funciones externas que hagan el conteo automáticamente (hazlo paso a paso)
 
 ---
 
@@ -37,35 +37,54 @@ Practicar el uso de:
 
 ### 🔹 *Paso 1 — Entender el requisito*
 
-- Necesitas recorrer la cadena desde el último carácter hasta el primero.
-- Por cada carácter encontrado, ir construyendo una nueva cadena en orden inverso.
+- Necesitamos un texto de entrada
+- Debemos quitar signos de puntuación para que no se cuenten como parte de la palabra
+- Debemos convertir todo a minúsculas para no contar "Hola" y "hola" como diferentes
+- Luego tenemos que contar cuántas veces aparece cada palabra.
 
 ### 🔹 *Paso 2 — Pensar la lógica*
 
-- Averigua la longitud de la cadena.
-- Identifica el índice del último carácter (recuerda que los índices comienzan en 0).
-- Usa un bucle para ir de atrás hacia adelante.
-- En cada iteración, agrega el carácter actual a una nueva variable que representará la cadena invertida.
+- Convertir el texto a minúsculas
+- Quitar los signos de puntuación usando una expresión regular
+- Dividir el texto en un array de palabras `(split(" "))`
+- Crear un objeto vacío para guardar el conteo
+- Recorrer cada palabra:
+    -   Si no existe en el objeto → agregar con valor 1  
+    -   Si ya existe → sumar 1  
+- Mostrar el resultado: palabra + cantidad.
 
-### 🔹 *Paso 3 — Estructura básica (algoritmo)*
+### 🔹Estructura básica (algoritmo)*
 
-- Guardar el texto original en una variable.
-- Crear una variable vacía donde guardarás el texto invertido.
-- Usar un bucle que vaya desde longitud - 1 hasta 0.
-- Ir añadiendo cada carácter a la nueva variable.
-- Mostrar en consola el resultado.
+```javascript
+function contarPalabras(texto):
+    convertir texto a minúsculas
+    quitar signos de puntuación
+    dividir texto en lista de palabras
+    crear objeto contador vacío
+    para cada palabra en lista:
+        if palabra no está en contador:
+            contador[palabra] = 1
+        si palabra ya está:
+            contador[palabra] += 1
+    mostrar cada palabra y su cantidad
 
+}
+```
 ---
 
 ## 📚 Recursos recomendados
 
 ### 🔁 Bucles y Strings
 
-- 📘 [Invertir un string - Stack Overflow)](https://es.stackoverflow.com/questions/226746/invertir-un-string-sin-reverse-en-js)
-- 📘 [Bucles en JavaScript — MDN Web Docs (español)](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- 📘 [Strings en JavaScript — MDN Web Docs (español)](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-- 📘 [Invertir una cadena sin reverse — FreeCodeCamp en español](https://www.freecodecamp.org/espanol/news/tres-formas-de-invertir-una-cadena-en-javascript/)
+- 📘 [toLowerCase() Para normalizar](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
+- 📘 [replace() + regex -> Para quitar signos de puntuación](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+- 📘 [split() Para dividir en palabras](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+
+### 📑 Estructuras y Bucles
+- 📘 [Objetos en JS Para almacenar el conteo ](https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Object_basics)
+- 📘 [Bucles for ...of ](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ---
+**📋 Consejo**
 
-> Si necesitas apoyo, consulta con tu formadora/or.
+Prueba con frases pequeñas y revisa si el resultado es correcto. Si algo falla, imprime en consola las palabras intermedias para depurar.
