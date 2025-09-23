@@ -1,4 +1,4 @@
-# 📝 Ejercicio 2 — Contador de Palabras
+# 📝 Ejercicio 4 — Contador de Palabras
 
 ## ¿Qué tienes que hacer
 
